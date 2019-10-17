@@ -8,16 +8,32 @@ def reverse_each_word(sentence)
     end
 end
 reverse_each_word(sentence)
-=end
 
+=end
 def reverse_each_word(word)
   sentence = word.split(" ")
   reverse_sentence = []
-  sentence.collect do |word|
+  sentence.each do |word|
      reverse_sentence << word.reverse
     end
     reverse_sentence.join(" ")
 end
+reverse_each_word("Hello there, and how are you?")
+
+
+def reverse_each_word(sentence)
+  sentence.split.collect {|word| word.reverse}.join(" ")
+end
+reverse_each_word("Hello there, and how are you?")
+
+
+def reverse_each_word(sentence)
+  sentence.split.collect do |word|
+    word.reverse
+  end
+  .join(" ")
+end
+  
 reverse_each_word("Hello there, and how are you?")
 
 =begin
@@ -42,8 +58,8 @@ def reverse_each_word_with_each(string)
 end
 
 
-=end
-=begin
+
+
 learn solution
 
 def reverse_each_word(sentence)
